@@ -91,10 +91,3 @@ rm -rf ~/.themes/transparent-shell
 gsettings reset org.gnome.shell.extensions.user-theme name
 ```
 
-## Автор
-
-[GlebKosyukov](https://github.com/GlebKosyukov)
-
-## Лицензия
-
-Лицензия не указана. Уточните условия использования у автора репозитория.
