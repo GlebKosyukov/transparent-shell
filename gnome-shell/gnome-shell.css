@@ -1,5 +1,21 @@
-/* Borders */
+/*
+ * Color palette — edit these values to customize the theme:
+ * panel_bg:         rgba(32, 32, 32, 0.75)
+ * panel_bg_banner:  rgba(32, 32, 32, 0.7)
+ * panel_border:     rgba(211, 211, 211, 0.2)
+ * calendar_bg:      rgba(25, 25, 25, 0.65)
+ * text_primary:     rgba(242, 242, 242, 1)
+ * text_secondary:   rgba(242, 242, 242, 0.67)
+ * text_muted:       rgba(242, 242, 242, 0.38)
+ * hover_bg:         rgba(217, 217, 217, 0.08)
+ * selected_bg:      rgba(217, 217, 217, 0.13)
+ * focus_bg:         rgba(27, 27, 27, 0.65)
+ * focus_ring:       rgba(191, 191, 191, 1)
+ * inset_border:     rgba(255, 255, 255, 0.03)
+ */
 
+
+/* Panels */
 .popup-menu-content,
 .quick-settings,
 .notification-banner,
@@ -7,31 +23,19 @@
 .modal-dialog,
 .switcher-list {
 	border: 2px solid rgba(211, 211, 211, 0.2);
+	background: rgba(32, 32, 32, 0.75);
 }
 
-
-/* Background colors */
-.popup-menu-content, 
-.quick-settings { 
-    background: rgba(32, 32, 32, 0.75);
-}
 .notification-banner {
-    background: rgba(32, 32, 32, 0.7) ;
+	background: rgba(32, 32, 32, 0.7);
 }
 
 .osd-window {
-    border-radius: 12px;
-    background: rgba(32, 32, 32, 0.75);
+	border-radius: 12px;
 }
 
-.modal-dialog {
-    background: rgba(32, 32, 32, 0.75);
-}
 
-.switcher-list {
-    background: rgba(32, 32, 32, 0.75);
-}
-
+/* Calendar */
 .calendar {
 	background-color: rgba(25, 25, 25, 0.65);
 	border-radius: 14px;
@@ -43,7 +47,6 @@
 	padding: 2px;
 }
 
-/* month header */
 .calendar-month-header .calendar-month-label {
 	color: rgba(242, 242, 242, 1) !important;
 	padding: 0 !important;
@@ -55,23 +58,17 @@
 	width: 2.2em;
 }
 
-/* days of week */
 .calendar-day.calendar-day-heading,
-.calendar .calendar-day-heading
-
-/* 46+ */
-	{
+.calendar .calendar-day-heading {
 	color: rgba(242, 242, 242, 0.67);
 	background-color: transparent;
 	border-radius: 8px;
 }
 
-/* day buttons, prev/next month button */
 .calendar-day,
 .calendar-month-header .pager-button {
 	color: rgba(242, 242, 242, 1);
 	background-color: transparent;
-	/* 46+ */
 	border-radius: 9px;
 	padding: 0;
 	transition-duration: 150ms;
@@ -86,9 +83,7 @@
 .calendar-day:hover,
 .calendar-day:selected:hover,
 .calendar .calendar-day-heading:hover,
-/* 46+ */
 .calendar .calendar-day-heading:selected:hover,
-/* 46+ */
 .calendar .calendar-month-header .pager-button:hover {
 	background-color: rgba(217, 217, 217, 0.08);
 	color: rgba(242, 242, 242, 1);
@@ -97,26 +92,21 @@
 
 .calendar-day:focus,
 .calendar .calendar-day-heading:focus,
-/* 46+ */
 .calendar .calendar-month-header .pager-button:focus {
 	background-color: rgba(27, 27, 27, 0.65);
 	box-shadow: inset 0 0 0 2px rgba(191, 191, 191, 1) !important;
 }
 
 .calendar-day:selected,
-.calendar .calendar-day-heading:selected
-
-/* 46+ */
-	{
+.calendar .calendar-day-heading:selected {
 	background: rgba(217, 217, 217, 0.13);
 	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
-/* today button */
 .calendar-today,
 .calendar-today:selected {
 	background-color: -st-accent-color !important;
-  color: -st-accent-fg-color !important;
+	color: -st-accent-fg-color !important;
 	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
@@ -128,33 +118,24 @@
 	brightness: 1.05;
 }
 
-/* if day has event */
 .calendar .calendar-day-with-events {
 	background-size: contain;
 	font-weight: 700;
 }
 
-.calendar .calendar-day-with-events {
-	font-weight: 700;
-}
-
+/* Weekend / non-work days — GNOME ≤44: .calendar-weekend, GNOME 45+: .calendar-nonwork-day */
 .calendar .calendar-nonwork-day,
-/* up to 44 */
 .calendar-weekend {
-	/* 45+ */
 	color: rgba(242, 242, 242, 0.67);
 }
 
-/* other month day button */
+/* Other-month days — GNOME ≤44: .calendar-other-month, GNOME 45+: .calendar-other-month-day */
 .calendar .calendar-other-month-day,
-/* up to 44 */
 .calendar-other-month {
-	/* 45+ */
 	color: rgba(242, 242, 242, 0.38) !important;
 }
 
 .calendar .calendar-other-month-day.calendar-day-with-events,
-/* up to 44 */
 .calendar-other-month.calendar-day-with-events {
 	background-size: contain;
 }
@@ -167,39 +148,49 @@
 }
 
 
-
-/* slider */
+/* Sliders */
 .slider,
 .level {
-  height: 16px;
-  -barlevel-height: 16px;
-  -barlevel-background-color:  #4e4639;
-  box-shadow: inset 0 0 0 1px rgba(652, 652, 652, 0.03);
-  /* fill */
-  -barlevel-active-background-color: -st-accent-color !important;
-  /* overfill */
-  -barlevel-overdrive-color: #c01c28;
-  -barlevel-overdrive-separator-width: 2px;
-  -slider-handle-radius: 7px;
+	height: 16px;
+	-barlevel-height: 16px;
+	-barlevel-background-color: #4e4639;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+	-barlevel-active-background-color: -st-accent-color !important;
+	-barlevel-overdrive-color: #c01c28;
+	-barlevel-overdrive-separator-width: 2px;
+	-slider-handle-radius: 7px;
 }
 
 
-/* Scroll bar */
+/* Scrollbars */
 StScrollBar {
-  padding: 0; }
-  StScrollView StScrollBar {
-    min-width: 8px;
-    min-height: 8px;}
-  StScrollBar StBin#trough {
-    border-radius: 0;
-    background-color: transparent; }
-  StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
-    border-radius: 8px;
-    background-color: rgba(57, 63, 70, 0.75);
-    border: 3px solid transparent;
-    transition-duration: 100ms; }
-    StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
-      background-color: rgba(56, 63, 71, 1); }
-    StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
-      background-color: rgba(78, 89, 100, 0.87); }
+	padding: 0;
+}
 
+StScrollView StScrollBar {
+	min-width: 8px;
+	min-height: 8px;
+}
+
+StScrollBar StBin#trough {
+	border-radius: 0;
+	background-color: transparent;
+}
+
+StScrollBar StButton#vhandle,
+StScrollBar StButton#hhandle {
+	border-radius: 8px;
+	background-color: rgba(57, 63, 70, 0.75);
+	border: 3px solid transparent;
+	transition-duration: 100ms;
+}
+
+StScrollBar StButton#vhandle:hover,
+StScrollBar StButton#hhandle:hover {
+	background-color: rgba(56, 63, 71, 1);
+}
+
+StScrollBar StButton#vhandle:active,
+StScrollBar StButton#hhandle:active {
+	background-color: rgba(78, 89, 100, 0.87);
+}
